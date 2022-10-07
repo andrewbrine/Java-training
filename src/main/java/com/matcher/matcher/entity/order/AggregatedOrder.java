@@ -1,22 +1,25 @@
-package com.matcher.matcher;
+package com.matcher.matcher.entity.order;
+
+import com.matcher.matcher.entity.order.Orders;
+import com.matcher.matcher.entity.order.OrderDetails;
 
 import java.util.ArrayList;
 
 public class AggregatedOrder {
-    private String action;
+    private String type;
     private double price;
     private int quantity;
     private ArrayList<OrderDetails> orderDetails = new ArrayList<OrderDetails>();
 
-    public AggregatedOrder(Order order){
-        action = order.getAction();
+    public AggregatedOrder(Orders order){
+        type = order.getType();
         price = order.getPrice();
         quantity = order.getQuantity();
-        orderDetails.add(new OrderDetails(order.getAccount(),order.getQuantity()));
+        orderDetails.add(new OrderDetails(order.getUsername(),order.getQuantity()));
     }
 
-    public String getAction(){
-        return action;
+    public String getType(){
+        return type;
     }
 
     public double getPrice(){
@@ -40,7 +43,7 @@ public class AggregatedOrder {
     }
 
     public String toString() {
-        String response = ( "\n Action: " + action + "\n Price: " + price + "\n Aggregated Quantity: " + quantity + "\n Number of Orders:" + orderDetails.size()) ;
+        String response = ( "\n Action: " + type + "\n Price: " + price + "\n Aggregated Quantity: " + quantity + "\n Number of Orders:" + orderDetails.size()) ;
         return response;
     }
 }

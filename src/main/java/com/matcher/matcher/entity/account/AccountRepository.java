@@ -1,5 +1,6 @@
-package com.matcher.matcher.entity;
+package com.matcher.matcher.entity.account;
 
+import com.matcher.matcher.entity.account.Account;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

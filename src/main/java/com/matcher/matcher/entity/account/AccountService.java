@@ -1,5 +1,7 @@
-package com.matcher.matcher.entity;
+package com.matcher.matcher.entity.account;
 
+import com.matcher.matcher.entity.account.Account;
+import com.matcher.matcher.entity.account.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

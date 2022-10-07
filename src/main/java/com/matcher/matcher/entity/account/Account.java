@@ -1,4 +1,4 @@
-package com.matcher.matcher.entity;
+package com.matcher.matcher.entity.account;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
